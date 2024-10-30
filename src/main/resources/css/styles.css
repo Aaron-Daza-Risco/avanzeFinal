@@ -1,0 +1,156 @@
+#buttonLateral{
+    -fx-background-color: #E6A700; /* Color inicial del botón */
+    -fx-background-radius: 10;     /* Borde redondeado */
+    -fx-text-fill: white;          /* Color del texto */
+    -fx-border-color: transparent; /* Borde transparente */
+}
+#buttonLateral:hover{
+    -fx-background-color: #af8509;
+    -fx-border-color: none;
+    -fx-text-fill: white;
+}
+
+#salirButton {
+    -fx-background-color: #0822f3;
+    -fx-background-radius: 10;     /* Borde redondeado */
+    -fx-text-fill: white;          /* Color del texto */
+    -fx-border-color: transparent; /* Borde transparente */
+}
+#salirButton:hover {
+    -fx-background-color: #050d7a;
+    -fx-border-color: none;
+    -fx-text-fill: white;
+}
+#search{
+    -fx-background-color: #d3a007;
+    -fx-background-radius: 10;     /* Borde redondeado */
+    -fx-text-fill: white;          /* Color del texto */
+    -fx-border-color: transparent; /* Borde transparente */
+}
+
+#search:hover{
+    -fx-background-color: #714f06;
+    -fx-border-color: none;
+    -fx-text-fill: white;
+
+}
+
+/* Estilo general de la tabla */
+.table-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: transparent;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px;
+    -fx-table-cell-border-color: transparent;
+}
+
+/* Encabezado de la tabla */
+.table-view .column-header {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+    -fx-border-color: transparent;
+    -fx-background-radius: 8px 8px 0 0;
+    -fx-background-color: none; /* Fondo blanco para el encabezado */
+
+
+}
+.table-view .column-header-background{
+    -fx-background-color:  #0066CC;
+    -fx-background-radius: 8px 8px 0 0;
+    -fx-padding: 10px;
+
+
+
+}
+.table-view .column-header .label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff; /* Cambia este color según prefieras */
+}
+
+/* Filas alternadas */
+.table-row-cell:odd {
+    -fx-background-color: #f7f7f7; /* Gris claro */
+}
+
+.table-row-cell:even {
+    -fx-background-color: #ffffff;
+}
+
+/* Texto de las celdas */
+.table-cell {
+    -fx-padding: 10px;
+    -fx-font-size: 13px;
+    -fx-text-fill: #555555; /* Texto en tono gris oscuro */
+}
+
+/* Efecto hover en las filas */
+.table-row-cell:hover {
+    -fx-background-color: #e0e0e0; /* Gris más claro al pasar el cursor */
+}
+
+/* Selección de la fila */
+.table-row-cell:selected {
+    -fx-background-color: #d1e7fd; /* Azul claro */
+    -fx-text-fill: #000000;
+}
+
+/* Bordes redondeados en la tabla */
+.table-view {
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+}
+
+#AnchorSide{
+    -fx-background-image: url("../Images/fondo-formas-azules.png");
+    -fx-background-size: cover; /* O "contain", dependiendo de tus necesidades */
+    -fx-background-repeat: no-repeat; /* Evita que la imagen se repita */
+    -fx-background-position: center; /* Centra la imagen */
+}
+#nextButton {
+    -fx-background-color:#0822f3 ;
+    -fx-background-radius: 8px;
+    -fx-text-fill: white;          /* Color del texto */
+    -fx-border-color: transparent; /* Borde transparente */
+}
+
+#nextButton:hover {
+    -fx-background-color: #050d7a;
+    -fx-border-color: none;
+    -fx-text-fill: white;
+
+}
+/*Estilo de los buses */
+
+. {
+    -fx-background-color: black;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+}
+
+.asiento-ocupado {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: pointer;
+}
+.asiento-disponible {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: pointer;
+}
+.asiento-disponible:hover {
+    -fx-background-color: #0d6303;
+}
+.asiento-ocupado:hover {
+    -fx-background-color: #7a050f;
+}
+#gridPane{
+    -fx-background-color: white;
+    -fx-border-radius: 8px;
+    -fx-border-color: #131313;
+    -fx-border-width: 4px;
+}

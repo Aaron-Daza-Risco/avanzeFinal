@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainContent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1014.0" prefWidth="1920.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.viacostafx.Controller.InterfazPrincipalController">
+   <children>
+      <VBox prefHeight="1014.0" prefWidth="333.0" style="-fx-background-color: #5899E2;">
+         <children>
+            <Pane id="AnchorSide" prefHeight="367.0" prefWidth="333.0" stylesheets="@../css/styles.css">
+               <children>
+                  <ImageView fitHeight="185.0" fitWidth="206.0" layoutX="74.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/profile.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="88.0" layoutY="255.0" prefHeight="38.0" prefWidth="185.0" text="¡Bienvenido!" textFill="WHITE">
+                     <font>
+                        <Font name="Open Sans Bold" size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="588.0" prefWidth="333.0" style="-fx-background-color: #0066CC;">
+               <children>
+                  <Button id="buttonLateral" graphicTextGap="10.0" layoutY="182.0" mnemonicParsing="false" onAction="#onMenuPrincipalClick" prefHeight="59.0" prefWidth="333.0" stylesheets="@../css/styles.css" text="Registro de boleto" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/boleto.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Open Sans Regular" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="buttonLateral" fx:id="btnRegistroUsuarios" graphicTextGap="10.0" layoutY="249.0" mnemonicParsing="false" onAction="#onRegistroUsuariosClick" prefHeight="59.0" prefWidth="333.0" stylesheets="@../css/styles.css" text="Registro de usuarios" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/registro.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Open Sans Regular" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="buttonLateral" fx:id="btnRegistroPasajeros" graphicTextGap="10.0" layoutY="319.0" mnemonicParsing="false" onAction="#onRegistroUsuariosClick" prefHeight="59.0" prefWidth="333.0" stylesheets="@../css/styles.css" text="Registro de Pasajeros" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/registro.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Open Sans Regular" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <Button id="salirButton" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="333.0" stylesheets="@../css/styles.css" text="Salir" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/logout%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Pane fx:id="contentArea" layoutX="333.0" layoutY="1.0" prefHeight="1014.0" prefWidth="1586.0">
+         <children>
+            <Pane layoutX="62.0" layoutY="161.0" prefHeight="100.0" prefWidth="1506.0" style="-fx-background-color: #0066CC; -fx-background-radius: 120px;">
+               <children>
+                  <Label layoutX="61.0" layoutY="34.0" prefHeight="32.0" prefWidth="89.0" text="*Origen" textFill="WHITE">
+                     <font>
+                        <Font name="Open Sans Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="origenCombo" layoutX="151.0" layoutY="38.0" prefWidth="150.0" promptText="--------" />
+                  <Label layoutX="336.0" layoutY="34.0" prefHeight="32.0" prefWidth="89.0" text="*Destino" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Open Sans Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="destinoCombo" layoutX="432.0" layoutY="40.0" prefWidth="150.0" promptText="--------" />
+                  <Label layoutX="627.0" layoutY="34.0" prefHeight="32.0" prefWidth="156.0" text="*Fecha de viaje" textFill="WHITE">
+                     <font>
+                        <Font name="Open Sans Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="viajeDate" layoutX="784.0" layoutY="40.0" />
+                  <Label layoutX="1000.0" layoutY="37.0" prefHeight="32.0" prefWidth="174.0" text="Fecha de regreso" textFill="#fffdfd">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="retornoDate" layoutX="1174.0" layoutY="40.0" onAction="#buscarYCargarPanelSecundario" />
+                  <Button id="search" fx:id="btnBuscar" graphicTextGap="10.0" layoutX="1359.0" layoutY="38.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="89.0" stylesheets="@../css/styles.css" text="Buscar" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/pngwing.com.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </Button>
+               </children>
+            </Pane>
+            <GridPane fx:id="Tabla1" layoutX="123.0" layoutY="312.0" prefHeight="582.0" prefWidth="1341.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="310.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="550.0" minHeight="10.0" prefHeight="550.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="tablaViajes" onSort="#onRegistroUsuariosClick" prefHeight="550.0" prefWidth="1330.0" stylesheets="@../css/styles.css" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="origenColumn" editable="false" maxWidth="1640.0" minWidth="30.0" prefWidth="164.0" text="Origen" />
+                        <TableColumn fx:id="destinoColumn" editable="false" maxWidth="1640.0" minWidth="30.0" prefWidth="164.0" text="Destino" />
+                        <TableColumn fx:id="horaSalidaColumn" editable="false" maxWidth="1800.0" minWidth="30.0" prefWidth="180.0" text="Hora de salida" />
+                        <TableColumn fx:id="tipoBusColumn" editable="false" maxWidth="2200.0" minWidth="30.0" prefWidth="220.0" text="Tipo de bus" />
+                        <TableColumn fx:id="disponibilidadColumn" editable="false" maxWidth="3000.0" minWidth="30.0" prefWidth="300.0" text="Disponibilidad" />
+                        <TableColumn fx:id="precioColumn" editable="false" maxWidth="3120.0" minWidth="30.0" prefWidth="312.0" text="Precio" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </GridPane>
+            <Label layoutX="62.0" layoutY="955.0" prefHeight="20.0" prefWidth="76.0" text="Ruta salida" textFill="#070707">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="141.0" layoutY="952.0" prefHeight="25.0" prefWidth="50.0" style="-fx-border-width: 0px;" />
+            <TextField layoutX="327.0" layoutY="952.0" prefHeight="25.0" prefWidth="50.0" />
+            <Label layoutX="210.0" layoutY="955.0" prefHeight="19.0" prefWidth="109.0" text="Ruta de retorno" textFill="#070707">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button id="nextButton" layoutX="1436.0" layoutY="942.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="124.0" stylesheets="@../css/styles.css" text="Siguiente" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/right.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text fill="#177ce3" layoutX="569.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de boleto" wrappingWidth="448.13671875">
+               <font>
+                  <Font name="Open Sans Bold" size="48.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
